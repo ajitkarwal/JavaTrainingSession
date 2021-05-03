@@ -1,5 +1,4 @@
 package OOPconceptPartOne;
-
 //Method OverLoading is distinguishing methods not by name but by their signature
 // i.e. using their parameters/arguments  to differentiate them.
 // i.e. Overloading in Java is the ability to create multiple methods of the same name,
@@ -21,7 +20,6 @@ public class MethodOverloading {
         System.out.println("With three params sum is : "+s1);
         int s2 = mo.sum(6,8);
         System.out.println("With two params sum is : "+s2);
-
 
     }
 //Why Method Overloading is needed?
