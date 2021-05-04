@@ -19,6 +19,11 @@ public class HashTableConcept {
         System.out.println(ht); // prints in sorted form according to to key names
                                 // output is {A=8, age=33, name=Ajit, sex=M, 1=apple}
 
+
+        //Checking if hashtable is empty
+        System.out.println("Is hashtable is empty: " + ht.isEmpty());
+
+
         //TO RESTRICT IT TO ONE DATA TYPE
 
         Hashtable<Integer, String> ht1 = new Hashtable<Integer, String>();// key is integer and value is string

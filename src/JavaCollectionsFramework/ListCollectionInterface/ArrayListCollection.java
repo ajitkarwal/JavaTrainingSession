@@ -1,25 +1,16 @@
-package OOPconceptPartFour;
+package JavaCollectionsFramework.ListCollectionInterface;
+
+import OOPconceptPartFour.Employee;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-/*
-1. it can contain duplicate values
-2. maintains insertion order.. 0,1,2,3,4,..
-3. not synchronized .. so not thread safe  it is slow
-4. it allows random access to fetch any element because it stores
-   the values on the basis of indexes. we can retrieve any value at any time.
-5. because it stores the values on the basis of indexes, for Loop can be used to retrieve the values
 
- */
+public class ArrayListCollection {
 
-
-
-public class ArrayListConcept {
 
     public static void main(String[] args) {
-
         ArrayList ar = new ArrayList(); //this ArrayList is RawType coz it is without any GENERICS(SEE BELOW)
-                                            // THAT IS WHY it is highlighted. it is a warning
+        // THAT IS WHY it is highlighted. it is a warning
 
         ar.add(100); // index starts from zero
         ar.add(200);
@@ -99,28 +90,28 @@ public class ArrayListConcept {
         al.add("Ajit");
         al.add("Marx");
         al.add("Glen");
-      //  al.add(100); this will give an error
+        //  al.add(100); this will give an error
 
 //What if we are not sure what type of data is generated and
 // to be stored in ArrayList at runtime?
-      //  ArrayList<E> al1= new ArrayList(E); // we are calling it in a static method
-                                    // so we have change the void main() to <E> main.
+        //  ArrayList<E> al1= new ArrayList(E); // we are calling it in a static method
+        // so we have change the void main() to <E> main.
         //generally we do not use it
 
-//STORING USER DEFINED CLASS OBJECTS IN ARRAYLIST (with generics concept)
+
+        //STORING USER DEFINED CLASS OBJECTS IN ARRAYLIST (with generics concept)
         // this is described with the help of Employee class in this package
 
         //creating Employee class objects ...
-        Employee e1 = new Employee("Ajit", 25, "Human Resource" );
+        EmployeeClass e1 = new EmployeeClass("Ajit", 25, "Human Resource" );
 
-        Employee e2 = new Employee("Naveen", 45, "QA");
-        Employee e3 = new Employee("Yuvraj", 34, "Tech");
-
+        EmployeeClass e2 = new EmployeeClass("Naveen", 45, "QA");
+        EmployeeClass e3 = new EmployeeClass("Yuvraj", 34, "Tech");
         //creating ArrayList to store Employee objects
         //i.e. this arrayList is going to store data of Employee data type.
         // so we have to define the Generics accordingly. like:
 
-        ArrayList<Employee> al1 = new ArrayList<Employee>(); //
+        ArrayList<EmployeeClass> al1 = new ArrayList<EmployeeClass>(); //
 
         al1.add(e1);
         al1.add(e2);
@@ -129,15 +120,15 @@ public class ArrayListConcept {
 //ITERATING TO TRAVERSE THE VALUES OF ARRAYLIST
 
         // all the elements are stored in iterator 'it'
-        Iterator<Employee> it =  al1.iterator();
+        Iterator<EmployeeClass> it =  al1.iterator();
 
         // iterator does not work on the basis indexes. so we are using while loop
         while (it.hasNext()){ //Returns true if the iteration has more elements.
 
-    // next() will return the next element in the iterator 'it'. in this case,
+            // next() will return the next element in the iterator 'it'. in this case,
             // elements are objects of Employee class. each time next() returns a new element
             //it is given to emp.
-            Employee emp = it.next(); // every time 'emp' has new object of class Employee
+            EmployeeClass emp = it.next(); // every time 'emp' has new object of class Employee
 
             System.out.println("Name : "+emp.name+"     Age : "+emp.age+ "   Department : "+emp.department  );
 
@@ -146,7 +137,7 @@ public class ArrayListConcept {
         //**************  OTHER IMPORTANT METHODS ********************************
 
 
- //*******     1. addALL() To store all the elements from one list to another
+        //*******     1. addALL() To store all the elements from one list to another
 
         ArrayList<String> al2 = new ArrayList<String>();
         al2.add("Ajit");
@@ -198,5 +189,6 @@ public class ArrayListConcept {
         }
 
 
-    }//main() Ends here
+
+    }
 }
