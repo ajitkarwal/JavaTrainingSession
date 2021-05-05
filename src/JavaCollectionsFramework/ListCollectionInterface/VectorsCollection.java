@@ -8,7 +8,7 @@ public class VectorsCollection {
     public static void main(String[] args) {
         Vector<Integer> v= new Vector<Integer>();
 
-        System.out.println("No of elements in Vector v "+v.size());
+        System.out.println("No of elements in Vector v "+v.size());//before adding elements
 
         v.addElement(1);
         v.addElement(2);
