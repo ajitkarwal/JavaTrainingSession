@@ -72,6 +72,7 @@ public class LinkedListCollection {
         System.out.println("*******  Using While loop  ************");
 
         int num = 0;
+
         while(ll.size()>num){
             System.out.println(ll.get(num));
             num++;
